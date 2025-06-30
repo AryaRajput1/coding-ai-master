@@ -34,6 +34,7 @@ export const getCodeReviewAI = async (code: string, language = "javascript") => 
             data: response.text
         }
     } catch (error) {
+        console.log(error)
         return {
             success: false,
             data: "",

@@ -1,5 +1,4 @@
 import Panel from '@/components/Panel'
-import { RedirectToSignIn } from '@clerk/nextjs'
 import { auth } from '@clerk/nextjs/server'
 import React from 'react'
 

@@ -24,7 +24,10 @@ export type CodeStoreTypes = {
 }
 
 
-const getReview = debounceFn(async (code, set, get: () => CodeStoreTypes) => {
+const getReview = debounceFn(async (code: string, set: (args: Partial<CodeStoreTypes>) => void, get: () => CodeStoreTypes) => {
+    if(!code) {
+        return;
+    }
     const { setIsReviewing } = get()
     try {
         setIsReviewing(true)
