@@ -6,7 +6,7 @@ const page =async () => {
   return (
     <div className='w-screen text-white gap-4 flex flex-col h-[80vh] justify-center items-center'>
       <div className='flex justify-center relative'>
-              <Image src={'/image.png'} width={400} height={400} alt='Logo' aria-hidden/>
+              <Image src={'/image.png'} width={400} height={400} alt='Logo' aria-hidden className='scale-75 md:scale-100'/>
               <div className='absolute z-10 left-[50%] top-[30%] translate-x-[-50%] font-extrabold text-binge-900'>Coding Master AI</div>
       </div>
       <h1 className='text-3xl pt-10 text-center'><span className='font-bold text-5xl text-binge-900'>Want to Improve?</span> </h1>

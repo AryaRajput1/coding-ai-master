@@ -5,7 +5,7 @@ import Button from './Button'
 
 const Navbar = () => {
     return (
-        <header className='w-full bg-primary-50 h-16'>
+        <header className='w-full bg-primary-50 h-16 p-4 lg:p-0'>
             <nav className='max-w-6xl mx-auto flex justify-between items-center h-full text-binge-900'>
                 <h1 className='font-bold text-xl'>CodingMasterAI</h1>
                 <ul className='flex items-center'>

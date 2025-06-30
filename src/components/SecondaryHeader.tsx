@@ -10,8 +10,8 @@ const SecondaryHeader = () => {
     return (
         <section className='h-16 bg-primary-50 flex justify-end items-center px-4 gap-2 text-white'>
             <Button onClick={changeLiveReview} className='border-none rounded-md p-1 px-4 text-binge-900'>Live Review: {liveReview ? 'On' : 'Off'}</Button>
-            <Button onClick={changeMode} className='border-none rounded-md p-1 px-4 text-binge-900'>{mode === 'code' ? 'Code' : 'Review'}</Button>
-            <span className='border-none rounded-md p-1 px-4 text-binge-900'>Javascript</span>
+            <Button onClick={changeMode} className='border-none rounded-md p-1 px-4 text-binge-900'>{mode === 'code' ? 'Output' : 'Review'}</Button>
+            <span className='border-none rounded-md p-1 px-2 md:px-4 text-binge-900'><span className='hidden md:inline-block'>Javascript</span><span className='md:hidden inline-block'>JS</span></span>
             <div>
                 <Button className='px-0' onClick={runCode}>
                     {isRunning ? 'Running....' : 'Run'}

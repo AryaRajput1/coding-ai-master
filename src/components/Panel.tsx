@@ -13,10 +13,10 @@ const Panel = () => {
     <section className='max-w-6xl mx-auto my-10'>
       <SecondaryHeader />
       <section className='w-full flex gap-8 h-[70vh] mt-4'>
-        <div className='w-1/2 bg-primary-50 h-full'>
+        <div className='w-full p-1 md:w-1/2 bg-primary-50 h-full'>
           <CodePanel />
         </div>
-        <div className='w-1/2'>
+        <div className='w-1/2 hidden md:block'>
           <div className='h-full w-full bg-white p-4 overflow-auto'>
             {mode === 'code' ? <PreviewPanel /> : <ReviewPanel />}
           </div>
