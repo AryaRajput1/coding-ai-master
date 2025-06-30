@@ -25,7 +25,7 @@ export type CodeStoreTypes = {
 
 
 const getReview = debounceFn(async (code: string, set: (args: Partial<CodeStoreTypes>) => void, get: () => CodeStoreTypes) => {
-    if(!code) {
+    if (!code) {
         return;
     }
     const { setIsReviewing } = get()
@@ -78,7 +78,8 @@ export const useCodeStore = create<CodeStoreTypes>((set, get) => ({
         })
     },
     getCode: () => {
-        if (!ISSERVER) { return JSON.parse(localStorage.getItem('code') || get().code); }
+        const code = localStorage.getItem('code')
+        if (!ISSERVER) { return code ? JSON.parse(code) : get().code }
 
         return get().code;
     },
