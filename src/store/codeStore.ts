@@ -11,6 +11,7 @@ export type CodeStoreTypes = {
     result: string
     error: string
     review: string
+    panel: 'code' | 'preview'
     mode: 'code' | 'review'
     liveReview: boolean
     isReviewing: boolean
@@ -19,6 +20,7 @@ export type CodeStoreTypes = {
     changeLiveReview: () => void
     setCode: (code: string) => void
     changeMode: () => void
+    changePanel: () => void
     runCode: () => void
     getCode: () => string
 }
@@ -52,8 +54,21 @@ export const useCodeStore = create<CodeStoreTypes>((set, get) => ({
     error: '',
     review: '',
     mode: 'code',
+    panel: 'code',
     isReviewing: false,
     reviewError: '',
+    changePanel: () => {
+        if (get().panel === 'code') {
+            set({
+                panel: 'preview'
+            })
+            return
+        }
+
+        set({
+            panel: 'code'
+        })
+    },
     setIsReviewing: (value) => {
         set({
             isReviewing: value
