@@ -2,6 +2,7 @@
 
 import { useCodeStore } from '@/store/codeStore'
 import React from 'react'
+import Loader from './Loader';
 
 
 const PreviewPanel = () => {
@@ -11,7 +12,7 @@ const PreviewPanel = () => {
     if (isRunning) {
         return <pre>
             <span className='animate-pulse'>
-                Running...
+                <Loader label="Code Running..."/>
             </span>
         </pre>
     }

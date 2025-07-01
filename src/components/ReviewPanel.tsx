@@ -1,5 +1,6 @@
 import { useCodeStore } from '@/store/codeStore'
 import React from 'react'
+import Loader from './Loader';
 
 const getFormatReview = (review: string) => {
     const parsedReview = review.split("•").filter(Boolean).map((reviewLine) => ({
@@ -33,7 +34,7 @@ const ReviewPanel = () => {
     if (isReviewing) {
         return <div>
             <span className='animate-pulse'>
-                Running...
+                <Loader label="Review Generating..."/>            
             </span>
         </div>
     }
